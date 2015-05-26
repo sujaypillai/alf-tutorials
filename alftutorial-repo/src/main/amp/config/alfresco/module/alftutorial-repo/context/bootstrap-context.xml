@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <!-- The bootstrap-context.xml file is used for patch definitions, importers, 
+		 workflow, and loading custom content models.  -->
+
+
+    <!-- Registration of new models -->
+    <bean id="org.ootb.dictionaryBootstrap" parent="dictionaryModelBootstrap" depends-on="dictionaryBootstrap">
+        <property name="models">
+            <list>
+                <value>alfresco/module/${project.artifactId}/model/content-model.xml</value>
+                <value>alfresco/module/${project.artifactId}/model/workflow-model.xml</value>
+            </list>
+        </property>
+    </bean>
+	
+	<bean id="ootb.space.customSpaceComponent" parent="spacesStoreImporter">
+		<property name="allowWrite"> 
+			<value>true</value> 
+		</property> 
+        <property name="useExistingStore">
+           <value>true</value>
+        </property>
+        <property name="bootstrapViews">
+           <list>
+               <props>
+                   <prop key="path">/app:company_home/app:dictionary</prop>
+                   <prop key="location">alfresco/extension/bootstrap/custom-spaces.xml</prop>
+                   <prop key="messages">alfresco/messages/custom-spaces</prop>
+               </props>         
+           </list>
+       </property>
+   </bean> 
+
+</beans>

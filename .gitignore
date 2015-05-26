@@ -3,4 +3,6 @@ build
 .classpath
 .project
 .settings
-alf-tutorials/bootstrap-repo/alf_data_dev
+alf-tutorials/alftutorial-repo/alf_data_dev
+alf-tutorials/alftutorial-repo/target
+alf-tutorials/alftutorial-share/target
