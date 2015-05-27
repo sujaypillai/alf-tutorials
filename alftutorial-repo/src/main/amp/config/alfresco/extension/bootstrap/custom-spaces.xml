@@ -95,6 +95,31 @@
 		        <cm:title>${spaces.ootb.model.name}</cm:title>
 		        <cm:description>${spaces.ootb.model.description}</cm:description>
 		      </cm:folder>
+		      <cm:folder view:childName="${spaces.dictionary.ootb.scripts.childname}">
+		        <app:uifacets/>
+		        <cm:name>${spaces.ootb.scripts.name}</cm:name>
+		        <app:icon>space-icon-default</app:icon>
+		        <cm:title>${spaces.ootb.scripts.name}</cm:title>
+		        <cm:description>${spaces.ootb.scripts.description}</cm:description>
+		        <cm:contains>
+					<cm:content view:childName="cm:test.js">
+						<view:aspects>
+							<cm:titled />
+							<cm:author />
+							<app:inlineeditable />
+						</view:aspects>
+						<view:properties>
+							<app:editInline>true</app:editInline>
+							<cm:description>ootb Customized email for Site Invitation</cm:description>
+							<cm:content>contentUrl=classpath:alfresco/extension/bootstrap/templates/scripts/test.js|mimetype=application/x-javascript|size=|encoding=UTF-8</cm:content>
+							<cm:title>Test Script</cm:title>
+							<cm:author>Sujay Pillai</cm:author>
+							<cm:name>test.js</cm:name>
+						</view:properties>
+						<view:associations></view:associations>
+					</cm:content>
+		        </cm:contains>
+		      </cm:folder>		      
     	</cm:contains>
 	</cm:folder>
 </view:view>
