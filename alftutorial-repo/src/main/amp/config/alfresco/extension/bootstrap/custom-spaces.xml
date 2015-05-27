@@ -39,7 +39,7 @@
 										<app:editInline>true</app:editInline>
 										<cm:description>ootb Customized email for Site Invitation</cm:description>
 										<cm:content>contentUrl=classpath:alfresco/extension/bootstrap/templates/invite/ootb_invite_email.html.ftl|mimetype=text/plain|size=|encoding=UTF-8|locale=en_US_</cm:content>
-										<cm:title>ootb Invite user to site</cm:title>
+										<cm:title>ootb_invite_email.html.ftl</cm:title>
 										<cm:author>Sujay Pillai</cm:author>
 										<cm:name>ootb_invite_email.html.ftl</cm:name>
 									</view:properties>
@@ -62,9 +62,9 @@
 									</view:aspects>
 									<view:properties>
 										<app:editInline>true</app:editInline>
-										<cm:description>ootb Customized email template for Suppliers</cm:description>
+										<cm:description>OOTB Customized email template</cm:description>
 										<cm:content>contentUrl=classpath:alfresco/extension/bootstrap/templates/notify/ootb_notify_user_email.ftl|mimetype=text/plain|size=|encoding=UTF-8|locale=en_US_</cm:content>
-										<cm:title>OOTB Notify User for document upload</cm:title>
+										<cm:title>ootb_notify_user_email.ftl</cm:title>
 										<cm:author>Sujay Pillai</cm:author>
 										<cm:name>ootb_notify_user_email.ftl</cm:name>
 									</view:properties>
