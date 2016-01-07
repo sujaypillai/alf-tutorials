@@ -32,4 +32,12 @@
         <property name="nodeLocatorService" ref="nodeLocatorService" />
     </bean>
     
+    <bean id="ootb.addUniqueIdentifier" class="org.ootb.repo.DocIdentifier" init-method="init">
+        <property name="policyComponent">
+               <ref bean="policyComponent" />
+        </property>
+        <property name="nodeService">
+               <ref bean="NodeService" />
+        </property>
+     </bean>
 </beans>

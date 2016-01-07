@@ -20,8 +20,18 @@
         <namespace uri="http://www.mycompany.com/model/content/1.0" prefix="myc"/>
     </namespaces>
 
-    <!-- ===============================================================================================================
-        Constraints, Types, and Aspects go here...
-        -->
-
+	<aspects>
+		<aspect name="myc:uniqueid">
+			<title>DOC Identifier</title>
+			<properties>
+				<property name="myc:id">
+					<title>DOC ID</title>
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+	</aspects>
 </model>
